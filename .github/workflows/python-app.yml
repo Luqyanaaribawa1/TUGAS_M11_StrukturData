@@ -1,4 +1,4 @@
-        name: Python application test
+name: Python application test
 on: [push]
 
 jobs:
@@ -22,6 +22,5 @@ jobs:
     - name: Upload output
       uses: actions/upload-artifact@v2
       with:
-        name: outpu_program
+        name: output_program
         path: output_program.txt
-
