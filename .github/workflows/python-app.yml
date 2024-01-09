@@ -3,11 +3,13 @@ on: [push]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: 3.8
     - name: Install dependencies
@@ -16,11 +18,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Python script and save output
       run: |
-        python avl_tree.py > output_program.txt
-    - name: Commit and push changes
-      run: |
-        git config --global user.name 'luqyanaaribawa1'
-        git config --global user.email 'luqyanaaribawa70@gmail.com'
-        git add output_program.txt
-        git commit -m "Add output_program1.txt"
-        git push https://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@github.com/luqyanaaribawa1/TUGAS_M11_StrukturData
+        python avl_tree.py > output.txt
+    - name: Upload output
+      uses: actions/upload-artifact@v3
+      with:
+        name: output_program
+        path: output_program.txt
