@@ -21,8 +21,8 @@ jobs:
         python avl_tree.py > output_program.txt
     - name: Commit and push changes
       run: |
-        git config --global user.name 'LuqyanaAribawa'
-        git config --global user.email 'luqyanaslipknotl@gmail.com'
+        git config --global user.name 'luqyanaaribawa1'
+        git config --global user.email 'luqyanaaribawa70@gmail.com'
         git add output_program.txt
         git commit -m "Add output_program1.txt"
         git push
