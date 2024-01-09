@@ -1,4 +1,4 @@
-name: Avl_tree.py
+name: avl_tree.py
 on: [push]
 
 jobs:
