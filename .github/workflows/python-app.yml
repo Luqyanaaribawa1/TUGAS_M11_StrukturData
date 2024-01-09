@@ -3,13 +3,11 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Set up Python 3.8
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2
       with:
         python-version: 3.8
     - name: Install dependencies
@@ -25,4 +23,4 @@ jobs:
         git config --global user.email 'luqyanaaribawa70@gmail.com'
         git add output_program.txt
         git commit -m "Add output_program1.txt"
-        git push
+        git push https://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@github.com/luqyanaaribawa1/TUGAS_M11_StrukturData
