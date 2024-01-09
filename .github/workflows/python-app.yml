@@ -20,7 +20,7 @@ jobs:
       run: |
         python avl_tree.py > output.txt
     - name: Upload output
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: output_program
         path: output_program.txt
